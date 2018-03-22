@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/profile.css">
+{% endblock %}
+{% block main %}
+<div id= 'profile_space'>
+    <div id="profile_pic">
+         <img id="picture" src="{{person['image']}}">
+    </div>
+    <div class="container">
+  <h2> Profile</h2>
+  
+       <div class='info' style='font-size: 22px;'> {{person['fname']}} {{person['lname']}} </div>
+      
+        <div class='info' style='font-size: 18px;'> Profile Added On: {{person['created_on']}}</div>
+      
+        <div class='info'> Username: {{person['username']}}</div>
+     
+        <div class='info'> ID: {{person['pid']}}</div>
+    
+        <div class='info'> Sex: {{person['gender']}}</div>
+   
+        <div class='info'>Age: {{person['age']}}</div>
+        
+         <div class='info'>Biography : {{person['bio']}}</div>
+</div>
+</div>
+{% endblock %}
